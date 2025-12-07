@@ -33,10 +33,10 @@ public class Expense {
 
     @Override
     public String toString() {
-        return "Expense is added: \n" +
-                "- Amount spent: $" + this.amount + "\n" +
+        return "- Amount spent: $" + this.amount + "\n" +
                 "- Category of expense: " + this.category + "\n" +
-                "- Description: " + this.description + "\n";
+                "- Description: " + this.description + "\n" +
+                "==========";
 
     }
 }
