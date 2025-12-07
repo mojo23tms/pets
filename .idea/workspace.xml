@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfb0f39e-3f39-4ceb-b758-1bd79d3f8c6e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoodLogger/bin/run.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoodLogger/manifest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoodLogger/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MoodLogger/src/MoodEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WordFreauencyCounter/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spending-tracker/src/com.yourname.spending/cli/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spending-tracker/src/com.yourname.spending/model/Expense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spending-tracker/src/com.yourname.spending/model/MoneyBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WordFreauencyCounter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/WordsCounter/src/WordFreauencyCounter/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="36NzapT6FoJPVxCwMYgYBwMthV2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -46,13 +40,19 @@
   "keyToString": {
     "Application.Main.executor": "Debug",
     "Application.MoodLogger.Main.executor": "Run",
+    "Application.com.yourname.spending.cli.Main.executor": "Run",
+    "Application.main.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Kirich Files/Software/Intellij IDEA Projects/pets"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger\bin" />
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger" />
@@ -61,7 +61,7 @@
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MoodLogger.Main">
+  <component name="RunManager" selected="Application.com.yourname.spending.cli.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WordFreauencyCounter.Main" />
       <module name="pets" />
@@ -88,8 +88,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.yourname.spending.cli.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yourname.spending.cli.Main" />
+      <module name="pets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yourname.spending.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="pets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.com.yourname.spending.cli.Main" />
+        <item itemvalue="Application.main.Main" />
         <item itemvalue="Application.MoodLogger.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -110,7 +138,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WordFreauencyCounter/Main.java</url>
+          <url>file://$PROJECT_DIR$/WordsCounter/src/WordFreauencyCounter/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
