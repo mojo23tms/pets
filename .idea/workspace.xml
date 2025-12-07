@@ -61,7 +61,7 @@
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.yourname.spending.cli.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WordFreauencyCounter.Main" />
       <module name="pets" />

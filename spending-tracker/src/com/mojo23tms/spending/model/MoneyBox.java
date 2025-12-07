@@ -1,4 +1,4 @@
-package com.yourname.spending.model;
+package com.mojo23tms.spending.model;
 
 public class MoneyBox {
 
