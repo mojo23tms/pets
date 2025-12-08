@@ -1,39 +1,26 @@
 package com.mojo23tms.spending.model;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Expense {
 
-    private int amount;
-    private String category;
-    private String description;
+    private final int amount;
+    private final String category;
+    private final String description;
+    private final LocalDate dateTime;
 
-    public Expense() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Add expense amount (USD): ");
-        setAmount(sc.nextInt());
-        sc.nextLine();
-        System.out.print("Specify category: ");
-        setCategory(sc.nextLine());
-        System.out.print("Add description: ");
-        setDescription(sc.nextLine());
-    }
-
-    private void setAmount(int amount) {
+    public Expense(int amount, String category, String description, LocalDate dateTime) {
         this.amount = amount;
-    }
-
-    private void setCategory(String category) {
         this.category = category;
-    }
-
-    private void setDescription(String description) {
         this.description = description;
+        this.dateTime = dateTime;
     }
 
     @Override
     public String toString() {
-        return "- Amount spent: $" + this.amount + "\n" +
+        return "- Date: " + this.dateTime + "\n" +
+                "- Amount spent: $" + this.amount + "\n" +
                 "- Category of expense: " + this.category + "\n" +
                 "- Description: " + this.description + "\n" +
                 "==========";

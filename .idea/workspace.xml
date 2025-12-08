@@ -28,25 +28,27 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="36NzapT6FoJPVxCwMYgYBwMthV2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Debug",
-    "Application.MoodLogger.Main.executor": "Run",
-    "Application.com.mojo23tms.spending.cli.Main.executor": "Run",
-    "Application.com.yourname.spending.cli.Main.executor": "Run",
-    "Application.main.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Kirich Files/Software/Intellij IDEA Projects/pets"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.MoodLogger.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.mojo23tms.spending.cli.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.yourname.spending.cli.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Kirich Files/Software/Intellij IDEA Projects/pets&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets" />
