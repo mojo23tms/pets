@@ -10,6 +10,22 @@ public class Expense {
     private final String description;
     private final LocalDate dateTime;
 
+    public String getCategory() {
+        return category;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public LocalDate getDateTime() {
+        return dateTime;
+    }
+
+    public int getAmount() {
+        return this.amount;
+    }
+
     public Expense(int amount, String category, String description, LocalDate dateTime) {
         this.amount = amount;
         this.category = category;
