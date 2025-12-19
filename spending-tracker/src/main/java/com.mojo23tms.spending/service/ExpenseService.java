@@ -5,27 +5,28 @@ import com.mojo23tms.spending.repository.ExpenseRepository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 public class ExpenseService {
+
+    private long id = 0;
 
     private final ExpenseRepository er = new ExpenseRepository();
 
     public void addExpense(int amount, String category, String description) {
-        boolean validAmount = amount >= 0;
-        boolean validCategory = !category.isEmpty();
-        boolean validDescription = !description.isEmpty();
+        boolean validAmount = amount > 0;
+        boolean validCategory = !category.isBlank();
+        boolean validDescription = !description.isBlank();
 
         if (!validAmount) {
-            System.out.println("Amount should be greater than 0!");
+            throw new IllegalArgumentException("Amount should be greater than 0!");
         } else if (!validCategory) {
-            System.out.println("Category can't be empty!");
+            throw new IllegalArgumentException("Category can't be empty!");
         } else if (!validDescription) {
-            System.out.println("Description can't be empty!");
+            throw new IllegalArgumentException("Description can't be empty!");
         }
-
-        if (validAmount && validCategory && validDescription) {
-            er.saveExpense(new Expense(amount, category, description, LocalDate.now()));
-        }
+        id++;
+        er.saveExpense(new Expense(amount, category, description, LocalDate.now(), id));
     }
 
     public int getTotalSpent() {
@@ -48,5 +49,15 @@ public class ExpenseService {
 
     public List<Expense> getAllExpenses() {
         return er.getExpenseList();
+    }
+
+    public void updateExpense(long id, int amount, String category, String description) {
+        er.updateById(id, Map.of("amount", String.valueOf(amount),
+                "category", category,
+                "description", description));
+    }
+
+    public void deleteExpense(long id) {
+        er.deleteById(id);
     }
 }

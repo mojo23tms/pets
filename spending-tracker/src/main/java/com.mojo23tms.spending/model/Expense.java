@@ -1,14 +1,15 @@
 package com.mojo23tms.spending.model;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Expense {
 
     private final int amount;
     private final String category;
     private final String description;
-    private final LocalDate dateTime;
+    private final LocalDate date;
+
+    private final long id;
 
     public String getCategory() {
         return category;
@@ -18,24 +19,30 @@ public class Expense {
         return description;
     }
 
-    public LocalDate getDateTime() {
-        return dateTime;
+    public LocalDate getDate() {
+        return date;
     }
 
     public int getAmount() {
         return this.amount;
     }
 
-    public Expense(int amount, String category, String description, LocalDate dateTime) {
+    public long getId() {
+        return this.id;
+    }
+
+    public Expense(int amount, String category, String description, LocalDate date, long id) {
         this.amount = amount;
         this.category = category;
         this.description = description;
-        this.dateTime = dateTime;
+        this.date = date;
+        this.id = id;
     }
 
     @Override
     public String toString() {
-        return "- Date: " + this.dateTime + "\n" +
+        return "- ID: " + this.id + "\n" +
+                "- Date: " + this.date + "\n" +
                 "- Amount spent: $" + this.amount + "\n" +
                 "- Category of expense: " + this.category + "\n" +
                 "- Description: " + this.description + "\n" +

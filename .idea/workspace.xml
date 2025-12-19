@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bfb0f39e-3f39-4ceb-b758-1bd79d3f8c6e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/model/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/service/ExpenseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/model/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/model/MoneyBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/repository/ExpenseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,62 +39,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.MoodLogger.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.mojo23tms.spending.cli.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.yourname.spending.cli.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Kirich Files/Software/Intellij IDEA Projects/pets&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MoodLogger.Main.executor": "Run",
+    "Application.com.mojo23tms.spending.cli.Main.executor": "Run",
+    "Application.com.yourname.spending.cli.Main.executor": "Run",
+    "Application.main.Main.executor": "Run",
+    "JUnit.ExpenseServiceTest (1).executor": "Run",
+    "JUnit.ExpenseServiceTest.checkThrowsException (1).executor": "Run",
+    "JUnit.ExpenseServiceTest.checkThrowsException.executor": "Run",
+    "JUnit.ExpenseServiceTest.checkValidExpense (1).executor": "Run",
+    "JUnit.ExpenseServiceTest.checkValidExpense (2).executor": "Run",
+    "JUnit.ExpenseServiceTest.checkValidExpense.executor": "Run",
+    "JUnit.ExpenseServiceTest.executor": "Run",
+    "JUnit.ExpenseServiceTest.test_checkValidExpense.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Kirich Files/Software/Intellij IDEA Projects/pets/spending-tracker/src/test/java/com.mojo23tms.spending"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\spending-tracker\src\test\java\com.mojo23tms.spending" />
+      <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\spending-tracker\src\com\mojo23tms\spending\test" />
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\spending-tracker\src\test\java\com.mojo23tms.spending" />
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger\bin" />
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger" />
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger\bin\MoodLogger" />
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets" />
-      <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets\MoodLogger\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.mojo23tms.spending.cli.Main">
+  <component name="RunManager" selected="JUnit.ExpenseServiceTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WordFreauencyCounter.Main" />
-      <module name="pets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="WordFreauencyCounter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MoodLogger.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MoodLogger.Main" />
-      <module name="pets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MoodLogger.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.mojo23tms.spending.cli.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.cli.Main" />
-      <module name="pets" />
+      <module name="SpendingTracker" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.mojo23tms.spending.cli.*" />
@@ -102,39 +89,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.yourname.spending.cli.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yourname.spending.cli.Main" />
-      <module name="pets" />
+    <configuration name="ExpenseServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpendingTracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yourname.spending.cli.*" />
+          <option name="PATTERN" value="com.mojo23tms.spending.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.mojo23tms.spending.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.service.ExpenseServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="pets" />
+    <configuration name="ExpenseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpendingTracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="java.com.mojo23tms.spending.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="java.com.mojo23tms.spending.service" />
+      <option name="MAIN_CLASS_NAME" value="java.com.mojo23tms.spending.service.ExpenseServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpenseServiceTest.checkValidExpense (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpendingTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java.com.mojo23tms.spending.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="java.com.mojo23tms.spending.service" />
+      <option name="MAIN_CLASS_NAME" value="java.com.mojo23tms.spending.service.ExpenseServiceTest" />
+      <option name="METHOD_NAME" value="checkValidExpense" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpenseServiceTest.checkValidExpense (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpendingTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mojo23tms.spending.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mojo23tms.spending.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.service.ExpenseServiceTest" />
+      <option name="METHOD_NAME" value="checkValidExpense" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.com.mojo23tms.spending.cli.Main" />
-        <item itemvalue="Application.com.yourname.spending.cli.Main" />
-        <item itemvalue="Application.main.Main" />
-        <item itemvalue="Application.MoodLogger.Main" />
+        <item itemvalue="JUnit.ExpenseServiceTest (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ExpenseServiceTest.checkValidExpense (2)" />
+        <item itemvalue="JUnit.ExpenseServiceTest.checkValidExpense (1)" />
+        <item itemvalue="JUnit.ExpenseServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +172,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -161,6 +195,20 @@
           <url>file://$PROJECT_DIR$/MoodLogger/src/Main.java</url>
           <line>42</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/test/service/ExpenseServiceTest.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/test/service/ExpenseServiceTest.java</url>
+          <line>20</line>
+          <properties class="service.ExpenseServiceTest" method="checkValidExpense">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

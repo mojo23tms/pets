@@ -1,12 +1,8 @@
 package com.mojo23tms.spending.cli;
 
 import com.mojo23tms.spending.model.Expense;
-import com.mojo23tms.spending.repository.ExpenseRepository;
 import com.mojo23tms.spending.service.ExpenseService;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -15,16 +11,23 @@ public class Main {
         ExpenseService es = new ExpenseService();
         System.out.println("Welcome to Spending Tracker!\nLet's help you keep more and waste less!");
         Scanner sc = new Scanner(System.in);
-        while(true) {
-            printMenuWithChoice();
+        boolean breakTheLoop = false;
+        while(!breakTheLoop) {
             var allExpense = es.getAllExpenses();
-            String input = sc.nextLine();
-            switch (Integer.parseInt(input)) {
+            int input = readMenuChoice(sc);
+            switch (input) {
                 case 1:
-                    int amount = readAmount(sc);
-                    String category = readCategory(sc);
-                    String description = readDescription(sc);
-                    es.addExpense(amount, category, description);
+                    while (true) {
+                        int amount = readAmount(sc);
+                        String category = readCategory(sc);
+                        String description = readDescription(sc);
+                        try {
+                            es.addExpense(amount, category, description);
+                            break;
+                        } catch (Exception e) {
+                            System.out.println(e.getMessage() + " Enter details again!");
+                        }
+                    }
                     System.out.println("Expense is added!\n");
                     continue;
                 case 2:
@@ -76,7 +79,7 @@ public class Main {
         return sc.nextLine();
     }
 
-    private static void printMenuWithChoice() {
+    private static int readMenuChoice(Scanner sc) {
         System.out.print("" +
                 "1. Add expense\n" +
                 "2. Show all expenses\n" +
@@ -84,6 +87,14 @@ public class Main {
                 "4. Show total by category\n" +
                 "0. Exit\n" +
                 "Your choice: ");
+        while (true) {
+            String choice = sc.nextLine();
+            try {
+                return Integer.parseInt(choice);
+            } catch (NumberFormatException e) {
+                System.out.println("Wrong entry! Enter anything from 0 - 4!");
+            }
+        }
     }
 
 }
