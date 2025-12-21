@@ -8,7 +8,6 @@ public class Expense {
     private final String category;
     private final String description;
     private final LocalDate date;
-    private final LocalDate lastUpdated;
 
     private final long id;
 

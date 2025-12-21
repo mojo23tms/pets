@@ -38,12 +38,14 @@ public class Main {
                 case 2:
                     try {
                         cliService.optionShowAllExpense();
+                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
                 case 3:
                     try {
                         System.out.println(cliService.optionShowTotalSpent());
+                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
@@ -51,6 +53,7 @@ public class Main {
                     try {
                         String category = readCategory(sc);
                         System.out.println(cliService.optionShowSpentByCategory(category));
+                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
@@ -61,6 +64,7 @@ public class Main {
                         String category = readCategory(sc);
                         String description = readDescription(sc);
                         System.out.println(cliService.optionUpdateExpense(id, amount, category, description));
+                        break;
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
@@ -68,6 +72,7 @@ public class Main {
                     try {
                         long id = readId(sc);
                         System.out.println(cliService.optionDeleteExpense(id));
+                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }

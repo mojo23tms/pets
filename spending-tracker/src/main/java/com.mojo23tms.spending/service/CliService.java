@@ -32,27 +32,27 @@ public class CliService {
     }
 
     public void optionShowAllExpense() {
-        checkIfEmpty();
+        es.checkIfEmpty();
         for (Expense expense : es.getAllExpenses()) {
             System.out.println(expense);
         }
     }
 
     public String optionShowTotalSpent() {
-        checkIfEmpty();
+        es.checkIfEmpty();
         return "Total amount spent: $" + es.getTotalSpent();
     }
 
     public String optionShowSpentByCategory(String category) {
-        checkIfEmpty();
+        es.checkIfEmpty();
         return "Total amount by category \"" + category + "\": $" + es.getTotalSpent(category) + "\n";
     }
 
     public String optionUpdateExpense(long id, int amount, String category, String description) {
         try {
-            verifyAmount(amount);
-            verifyCategory(category);
-            verifyDescription(description);
+            es.verifyAmount(amount);
+            es.verifyCategory(category);
+            es.verifyDescription(description);
             es.updateExpenseById(id, amount, category, description);
             return "Expense updated!";
         } catch (Exception e) {
@@ -69,27 +69,5 @@ public class CliService {
         }
     }
 
-    private void checkIfEmpty() {
-        if (es.getAllExpenses().isEmpty()) {
-            throw new NullPointerException("Expense list is empty!");
-        }
-    }
 
-    private void verifyAmount(int amount) {
-        if (!(amount > 0)) {
-            throw new IllegalArgumentException("Amount should be greater than 0!");
-        }
-    }
-
-    private void verifyCategory(String category) {
-        if (category.isBlank()) {
-            throw new IllegalArgumentException("Category can't be empty!");
-        }
-    }
-
-    private void verifyDescription(String description) {
-        if (description.isBlank()) {
-            throw new IllegalArgumentException("Description can't be empty!");
-        }
-    }
 }

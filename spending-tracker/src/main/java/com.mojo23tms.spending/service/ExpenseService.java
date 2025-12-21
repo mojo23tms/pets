@@ -16,24 +16,13 @@ public class ExpenseService {
     private final ExpenseRepository er = new ExpenseRepository();
 
     public void addExpense(int amount, String category, String description) {
-        boolean validAmount = amount > 0;
-        boolean validCategory = !category.isBlank();
-        boolean validDescription = !description.isBlank();
-
-        if (!validAmount) {
-            throw new IllegalArgumentException("Amount should be greater than 0!");
-        } else if (!validCategory) {
-            throw new IllegalArgumentException("Category can't be empty!");
-        } else if (!validDescription) {
-            throw new IllegalArgumentException("Description can't be empty!");
-        }
         id++;
         er.saveExpense(new Expense(amount, category, description, id));
     }
 
     public int getTotalSpent() {
         int sum = 0;
-        for(Expense expense : er.getExpenseList()) {
+        for (Expense expense : er.getExpenseList()) {
             sum += expense.getAmount();
         }
         return sum;
@@ -41,7 +30,7 @@ public class ExpenseService {
 
     public int getTotalSpent(String category) {
         int sum = 0;
-        for(Expense expense : er.getExpenseList()) {
+        for (Expense expense : er.getExpenseList()) {
             if (expense.getCategory().equals(category)) {
                 sum += expense.getAmount();
             }
@@ -53,24 +42,41 @@ public class ExpenseService {
         return er.getExpenseList();
     }
 
-    public boolean updateExpenseById(long id, int amount, String category, String description) {
-        if (amount > 0) {
+    public void updateExpenseById(long id, int amount, String category, String description) {
+        Expense updated = new Expense(amount, category, description, id);
+        if(er.updateExpense(id, updated)) {
+            throw new NoSuchElementException("No expense with such ID");
         }
-
-        if (amount > 0 && !category.isBlank() && !description.isBlank()) {
-            Expense updated = new Expense(amount, category, description, id);
-            return er.updateExpense(id, updated);
-        }
-        return false;
     }
 
-    public boolean deleteExpense(long id) {
+    public void deleteExpense(long id) {
         if (er.deleteExpense(id)) {
             throw new NoSuchElementException("Expense with ID: " + id + "doesn't exist");
         }
+    }
 
-        return true;
+    void checkIfEmpty() {
+        if (getAllExpenses().isEmpty()) {
+            throw new NullPointerException("Expense list is empty!");
+        }
+    }
 
+    void verifyAmount(int amount) {
+        if (!(amount > 0)) {
+            throw new IllegalArgumentException("Amount should be greater than 0!");
+        }
+    }
+
+    void verifyCategory(String category) {
+        if (category.isBlank()) {
+            throw new IllegalArgumentException("Category can't be empty!");
+        }
+    }
+
+    void verifyDescription(String description) {
+        if (description.isBlank()) {
+            throw new IllegalArgumentException("Description can't be empty!");
+        }
     }
 
 
