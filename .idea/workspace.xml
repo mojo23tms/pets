@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bfb0f39e-3f39-4ceb-b758-1bd79d3f8c6e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/CliService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/CliService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/test/java/com.mojo23tms.spending/service/ExpenseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/test/java/com.mojo23tms.spending/service/ExpenseServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +58,10 @@
     "Application.com.yourname.spending.cli.Main.executor": "Run",
     "Application.main.Main.executor": "Run",
     "JUnit.ExpenseServiceTest (1).executor": "Run",
+    "JUnit.ExpenseServiceTest.checkDeleteExpense.executor": "Run",
     "JUnit.ExpenseServiceTest.checkThrowsException (1).executor": "Run",
     "JUnit.ExpenseServiceTest.checkThrowsException.executor": "Run",
+    "JUnit.ExpenseServiceTest.checkUpdateExpense.executor": "Debug",
     "JUnit.ExpenseServiceTest.checkValidExpense (1).executor": "Run",
     "JUnit.ExpenseServiceTest.checkValidExpense (2).executor": "Run",
     "JUnit.ExpenseServiceTest.checkValidExpense.executor": "Run",
@@ -95,7 +97,7 @@
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExpenseServiceTest (1)">
+  <component name="RunManager" selected="JUnit.ExpenseServiceTest.checkDeleteExpense">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.cli.Main" />
       <module name="SpendingTracker" />
@@ -124,32 +126,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpenseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpenseServiceTest.checkDeleteExpense" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpendingTracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java.com.mojo23tms.spending.service.*" />
+          <option name="PATTERN" value="com.mojo23tms.spending.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="java.com.mojo23tms.spending.service" />
-      <option name="MAIN_CLASS_NAME" value="java.com.mojo23tms.spending.service.ExpenseServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.mojo23tms.spending.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.service.ExpenseServiceTest" />
+      <option name="METHOD_NAME" value="checkDeleteExpense" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpenseServiceTest.checkValidExpense (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpenseServiceTest.checkUpdateExpense" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpendingTracker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java.com.mojo23tms.spending.service.*" />
+          <option name="PATTERN" value="com.mojo23tms.spending.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="java.com.mojo23tms.spending.service" />
-      <option name="MAIN_CLASS_NAME" value="java.com.mojo23tms.spending.service.ExpenseServiceTest" />
-      <option name="METHOD_NAME" value="checkValidExpense" />
+      <option name="PACKAGE_NAME" value="com.mojo23tms.spending.service" />
+      <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.service.ExpenseServiceTest" />
+      <option name="METHOD_NAME" value="checkUpdateExpense" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ExpenseServiceTest.checkDeleteExpense" />
         <item itemvalue="JUnit.ExpenseServiceTest (1)" />
+        <item itemvalue="JUnit.ExpenseServiceTest.checkUpdateExpense" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ExpenseServiceTest.checkValidExpense (2)" />
-        <item itemvalue="JUnit.ExpenseServiceTest.checkValidExpense (1)" />
-        <item itemvalue="JUnit.ExpenseServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +200,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764861883034</updated>
-      <workItem from="1766170080084" duration="7208000" />
+      <workItem from="1766170080084" duration="8331000" />
     </task>
     <servers />
   </component>

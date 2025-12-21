@@ -63,7 +63,7 @@ public class ExpenseService {
     }
 
     void checkIfEmpty() {
-        if (getAllExpenses().isEmpty()) {
+        if (er.getExpenseList().isEmpty()) {
             throw new NullPointerException("Expense list is empty!");
         }
     }
