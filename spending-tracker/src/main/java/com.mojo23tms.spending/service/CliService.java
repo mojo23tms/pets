@@ -32,27 +32,21 @@ public class CliService {
     }
 
     public void optionShowAllExpense() {
-        es.checkIfEmpty();
         for (Expense expense : es.getAllExpenses()) {
             System.out.println(expense);
         }
     }
 
     public String optionShowTotalSpent() {
-        es.checkIfEmpty();
         return "Total amount spent: $" + es.getTotalSpent();
     }
 
     public String optionShowSpentByCategory(String category) {
-        es.checkIfEmpty();
         return "Total amount by category \"" + category + "\": $" + es.getTotalSpent(category) + "\n";
     }
 
     public String optionUpdateExpense(long id, int amount, String category, String description) {
         try {
-            es.verifyAmount(amount);
-            es.verifyCategory(category);
-            es.verifyDescription(description);
             es.updateExpenseById(id, amount, category, description);
             return "Expense updated!";
         } catch (Exception e) {

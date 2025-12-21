@@ -15,12 +15,17 @@ public class ExpenseService {
 
     private final ExpenseRepository er = new ExpenseRepository();
 
-    public void addExpense(int amount, String category, String description) {
+    public void addExpense(int amount, String category, String description) throws IllegalArgumentException {
+        verifyAmount(amount);
+        verifyCategory(category);
+        verifyDescription(description);
         id++;
         er.saveExpense(new Expense(amount, category, description, id));
+
     }
 
-    public int getTotalSpent() {
+    public int getTotalSpent() throws NullPointerException{
+        checkIfEmpty();
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
             sum += expense.getAmount();
@@ -28,7 +33,8 @@ public class ExpenseService {
         return sum;
     }
 
-    public int getTotalSpent(String category) {
+    public int getTotalSpent(String category) throws NullPointerException{
+        checkIfEmpty();
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
             if (expense.getCategory().equals(category)) {
@@ -38,19 +44,20 @@ public class ExpenseService {
         return sum;
     }
 
-    public List<Expense> getAllExpenses() {
+    public List<Expense> getAllExpenses() throws NullPointerException{
+        checkIfEmpty();
         return er.getExpenseList();
     }
 
     public void updateExpenseById(long id, int amount, String category, String description) {
         Expense updated = new Expense(amount, category, description, id);
-        if(er.updateExpense(id, updated)) {
+        if (!er.updateExpense(id, updated)) {
             throw new NoSuchElementException("No expense with such ID");
         }
     }
 
     public void deleteExpense(long id) {
-        if (er.deleteExpense(id)) {
+        if (!er.deleteExpense(id)) {
             throw new NoSuchElementException("Expense with ID: " + id + "doesn't exist");
         }
     }

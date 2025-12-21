@@ -35,6 +35,7 @@ public class Main {
                             System.out.println(e.getMessage());
                         }
                     }
+                    break;
                 case 2:
                     try {
                         cliService.optionShowAllExpense();
@@ -42,6 +43,7 @@ public class Main {
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
                 case 3:
                     try {
                         System.out.println(cliService.optionShowTotalSpent());
@@ -49,6 +51,7 @@ public class Main {
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
                 case 4:
                     try {
                         String category = readCategory(sc);
@@ -57,6 +60,7 @@ public class Main {
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
                 case 5:
                     try {
                         long id = readId(sc);
@@ -68,6 +72,7 @@ public class Main {
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
                 case 6:
                     try {
                         long id = readId(sc);
@@ -76,6 +81,7 @@ public class Main {
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
+                    break;
                 case 0:
                     System.out.println("Thank you for using our Spending Tracker!");
                     break;
