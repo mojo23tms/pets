@@ -32,10 +32,14 @@ public class Expense {
     }
 
     public Expense(int amount, String category, String description, long id) {
+        this(amount, category, description, id, LocalDate.now());
+    }
+
+    public Expense(int amount, String category, String description, long id, LocalDate updatedDate) {
         this.amount = amount;
         this.category = category;
         this.description = description;
-        this.date = LocalDate.now();
+        this.date = updatedDate;
         this.id = id;
     }
 

@@ -19,7 +19,7 @@ public class Main {
             int input;
             try {
                 input = cliService.readMenuChoice(sc);
-            } catch (IllegalArgumentException e) {
+            } catch (Exception e) {
                 System.out.printf(e.getMessage());
                 continue;
             }
@@ -48,6 +48,7 @@ public class Main {
                     } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
+                    continue;
                 case 3:
                     try {
                         es.checkIfEmpty();
@@ -55,6 +56,7 @@ public class Main {
                     } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
+                    continue;
                 case 4:
                     try {
                         es.checkIfEmpty();
@@ -63,6 +65,7 @@ public class Main {
                     } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
+                    continue;
                 case 5:
                     try {
                         es.checkIfEmpty();
@@ -75,6 +78,7 @@ public class Main {
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
+                    continue;
                 case 6:
                     try {
                         es.checkIfEmpty();
@@ -83,11 +87,12 @@ public class Main {
                     } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
+                    continue;
                 case 0:
                     System.out.println("Thank you for using our Spending Tracker!");
+                    running = false;
                     break;
             }
-            running = false;
         }
     }
 

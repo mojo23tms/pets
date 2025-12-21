@@ -7,8 +7,9 @@
     <list default="true" id="bfb0f39e-3f39-4ceb-b758-1bd79d3f8c6e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/CliService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/CliService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/model/Expense.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/test/java/com.mojo23tms.spending/service/ExpenseServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/test/java/com.mojo23tms.spending/service/ExpenseServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +69,7 @@
     "JUnit.ExpenseServiceTest.checkValidExpense.executor": "Run",
     "JUnit.ExpenseServiceTest.executor": "Run",
     "JUnit.ExpenseServiceTest.test_checkValidExpense.executor": "Debug",
+    "JUnit.ExpenseServiceTest.test_invalidIdUpdateExpense.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -105,7 +107,7 @@
       <recent name="D:\Kirich Files\Software\Intellij IDEA Projects\pets" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ExpenseServiceTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.cli.Main" />
       <module name="SpendingTracker" />
@@ -166,7 +168,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExpenseServiceTest.checkValidExpense (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExpenseServiceTest.test_invalidIdUpdateExpense" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpendingTracker" />
       <extension name="coverage">
         <pattern>
@@ -176,7 +178,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.mojo23tms.spending.service" />
       <option name="MAIN_CLASS_NAME" value="com.mojo23tms.spending.service.ExpenseServiceTest" />
-      <option name="METHOD_NAME" value="checkValidExpense" />
+      <option name="METHOD_NAME" value="test_invalidIdUpdateExpense" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -184,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ExpenseServiceTest (1)" />
+        <item itemvalue="JUnit.ExpenseServiceTest.test_invalidIdUpdateExpense" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ExpenseServiceTest.checkDeleteExpense" />
-        <item itemvalue="JUnit.ExpenseServiceTest (1)" />
         <item itemvalue="JUnit.ExpenseServiceTest.checkUpdateExpense" />
-        <item itemvalue="JUnit.ExpenseServiceTest.checkValidExpense (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +210,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764861883034</updated>
-      <workItem from="1766170080084" duration="11937000" />
+      <workItem from="1766170080084" duration="13651000" />
     </task>
     <servers />
   </component>
@@ -255,6 +257,11 @@
           <url>file://$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/test/service/ExpenseServiceTest.java</url>
           <line>21</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spending-tracker/src/test/java/com.mojo23tms.spending/service/ExpenseServiceTest.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/test/service/ExpenseServiceTest.java</url>

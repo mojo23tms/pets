@@ -24,7 +24,7 @@ public class ExpenseService {
 
     }
 
-    public int getTotalSpent() throws NullPointerException{
+    public int getTotalSpent() {
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
             sum += expense.getAmount();
@@ -32,7 +32,7 @@ public class ExpenseService {
         return sum;
     }
 
-    public int getTotalSpent(String category) throws NullPointerException {
+    public int getTotalSpent(String category) {
         verifyCategory(category);
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
@@ -43,7 +43,7 @@ public class ExpenseService {
         return sum;
     }
 
-    public List<Expense> getAllExpenses() throws NullPointerException{
+    public List<Expense> getAllExpenses() {
         return er.getExpenseList();
     }
 
@@ -61,7 +61,7 @@ public class ExpenseService {
     public void deleteExpense(long id) {
         boolean isDeleted = er.deleteExpense(id);
         if (!isDeleted) {
-            throw new NoSuchElementException("Expense with ID: " + id + "doesn't exist");
+            throw new NoSuchElementException("Expense with ID: " + id + " doesn't exist");
         }
     }
 

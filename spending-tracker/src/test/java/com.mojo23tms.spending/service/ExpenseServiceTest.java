@@ -1,18 +1,20 @@
 package com.mojo23tms.spending.service;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import com.mojo23tms.spending.service.ExpenseService;
 import com.mojo23tms.spending.model.Expense;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.assertj.core.api.Assertions.*;
 
 public class ExpenseServiceTest {
     private ExpenseService es;
 
-    private int amount = 25;
-    private String category = "food";
-    private String description = "lunch";
+    private final int amount = 25;
+    private final String category = "food";
+    private final String description = "lunch";
 
     @BeforeEach
     public void setup() {
@@ -42,7 +44,7 @@ public class ExpenseServiceTest {
     }
 
     @Test
-    public void test_invalidParameterThrowsException() {
+    public void test_invalidAmountThrowsException() {
         int invalidAmount = -25;
         assertThatThrownBy(() ->
                 es.addExpense(invalidAmount, category, description)
@@ -78,18 +80,40 @@ public class ExpenseServiceTest {
     }
 
     @Test
-    public void test_validDeleteExpense() {
+    public void test_invalidIdUpdateExpense() {
         long expenseId = es.getAllExpenses().get(0).getId();
-
-        es.addExpense(45, "a", "b");
-
-        es.deleteExpense(expenseId);
-        Expense lastExpense = es.getAllExpenses().get(0);
-        assertThat(es.getAllExpenses().size())
-                .as("Expense wasn't deleted!")
-                .isEqualTo(1);
-        assertThat(lastExpense.getId())
-                .as("Remaining expense ID is changed!")
-                .isEqualTo(2);
+        assertThatThrownBy(() ->
+                es.updateExpenseById(expenseId + 120, amount, category, description)
+        )
+                .isInstanceOf(NoSuchElementException.class)
+                .hasMessageContaining("No expense with such ID");
     }
+
+    @Test
+    public void test_invalidIdDeleteExpense() {
+        long expenseId = es.getAllExpenses().get(0).getId();
+        long invalidId = expenseId + 120;
+        assertThatThrownBy(() ->
+                es.deleteExpense(invalidId)
+        )
+                .isInstanceOf(NoSuchElementException.class)
+                .hasMessageContaining("Expense with ID: " + invalidId + " doesn't exist");
+    }
+
+    @Test
+    public void test_validEmptyListResponse() {
+        ExpenseService es_empty = new ExpenseService();
+        SoftAssertions.assertSoftly(softly -> {
+            softly.assertThat(es_empty.getAllExpenses())
+                    .as("List is not empty!")
+                    .isEmpty();
+            softly.assertThat(es_empty.getTotalSpent())
+                    .as("Total amount should be 0!")
+                    .isZero();
+            softly.assertThat(es_empty.getTotalSpent(category))
+                    .as("Total amount should be 0!")
+                    .isZero();
+        });
+    }
+
 }
