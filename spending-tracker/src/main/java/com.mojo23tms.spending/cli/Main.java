@@ -41,27 +41,29 @@ public class Main {
                 case 2:
                     try {
                         cliService.optionShowAllExpense();
-                    } catch (NullPointerException e) {
+                    } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
                     continue;
                 case 3:
                     try {
                         System.out.println(cliService.optionShowTotalSpent());
-                    } catch (NullPointerException e) {
+                    } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
                     continue;
                 case 4:
                     try {
+                        es.checkIfEmpty();
                         String category = readCategory(sc);
                         System.out.println(cliService.optionShowSpentByCategory(category));
-                    } catch (NullPointerException e) {
+                    } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
                     continue;
                 case 5:
                     try {
+                        es.checkIfEmpty();
                         long id = readId(sc);
                         int amount = readAmount(sc);
                         String category = readCategory(sc);
@@ -74,9 +76,10 @@ public class Main {
                     continue;
                 case 6:
                     try {
+                        es.checkIfEmpty();
                         long id = readId(sc);
                         System.out.println(cliService.optionDeleteExpense(id));
-                    } catch (NullPointerException e) {
+                    } catch (IllegalStateException e) {
                         System.out.println(e.getMessage());
                     }
                     continue;

@@ -51,7 +51,6 @@ public class ExpenseService {
     }
 
     public void updateExpenseById(long id, int amount, String category, String description) {
-        checkIfEmpty();
         verifyAmount(amount);
         verifyCategory(category);
         verifyDescription(description);
@@ -69,9 +68,9 @@ public class ExpenseService {
         }
     }
 
-    void checkIfEmpty() {
+    public void checkIfEmpty() {
         if (er.getExpenseList().isEmpty()) {
-            throw new NullPointerException("Expense list is empty!");
+            throw new IllegalStateException("Expense list is empty!");
         }
     }
 
