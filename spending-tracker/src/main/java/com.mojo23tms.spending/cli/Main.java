@@ -23,65 +23,63 @@ public class Main {
                 continue;
             }
             switch (input) {
+                // Ask user for Expense parameters, repeat if any parameter is wrong, release if expense is added
                 case 1:
                     while (true) {
                         try {
                             int amount = readAmount(sc);
                             String category = readCategory(sc);
                             String description = readDescription(sc);
-                            cliService.optionAddExpense(amount, category, description);
+                            String result = cliService.optionAddExpense(amount, category, description);
+                            System.out.println(result);
                             break;
                         } catch (Exception e) {
                             System.out.println(e.getMessage());
                         }
                     }
-                    break;
+                    continue;
                 case 2:
                     try {
                         cliService.optionShowAllExpense();
-                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
-                    break;
+                    continue;
                 case 3:
                     try {
                         System.out.println(cliService.optionShowTotalSpent());
-                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
-                    break;
+                    continue;
                 case 4:
                     try {
                         String category = readCategory(sc);
                         System.out.println(cliService.optionShowSpentByCategory(category));
-                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
-                    break;
+                    continue;
                 case 5:
                     try {
                         long id = readId(sc);
                         int amount = readAmount(sc);
                         String category = readCategory(sc);
                         String description = readDescription(sc);
-                        System.out.println(cliService.optionUpdateExpense(id, amount, category, description));
-                        break;
+                        String result = cliService.optionUpdateExpense(id, amount, category, description);
+                        System.out.println(result);
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
-                    break;
+                    continue;
                 case 6:
                     try {
                         long id = readId(sc);
                         System.out.println(cliService.optionDeleteExpense(id));
-                        break;
                     } catch (NullPointerException e) {
                         System.out.println(e.getMessage());
                     }
-                    break;
+                    continue;
                 case 0:
                     System.out.println("Thank you for using our Spending Tracker!");
                     break;

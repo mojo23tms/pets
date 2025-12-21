@@ -23,12 +23,10 @@ public class CliService {
         }
     }
 
-    public void optionAddExpense(int amount, String category, String description) {
-        try {
-            es.addExpense(amount, category, description);
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException(e.getMessage() + "\nEnter details again!");
-        }
+    public String optionAddExpense(int amount, String category, String description) {
+        es.addExpense(amount, category, description);
+        List<Expense> allExpense = es.getAllExpenses();
+        return "Expense is added: \n" + allExpense.get(allExpense.size() - 1);
     }
 
     public void optionShowAllExpense() {
@@ -46,21 +44,13 @@ public class CliService {
     }
 
     public String optionUpdateExpense(long id, int amount, String category, String description) {
-        try {
-            es.updateExpenseById(id, amount, category, description);
-            return "Expense updated!";
-        } catch (Exception e) {
-            throw new IllegalArgumentException(e.getMessage());
-        }
+        es.updateExpenseById(id, amount, category, description);
+        return "Expense updated!";
     }
 
     public String optionDeleteExpense(long id) {
-        try {
-            es.deleteExpense(id);
-            return "Expense removed!";
-        } catch (Exception e) {
-            throw new NoSuchElementException(e.getMessage());
-        }
+        es.deleteExpense(id);
+        return "Expense removed!";
     }
 
 

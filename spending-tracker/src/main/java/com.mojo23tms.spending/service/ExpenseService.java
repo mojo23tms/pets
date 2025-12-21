@@ -33,8 +33,9 @@ public class ExpenseService {
         return sum;
     }
 
-    public int getTotalSpent(String category) throws NullPointerException{
+    public int getTotalSpent(String category) throws NullPointerException {
         checkIfEmpty();
+        verifyCategory(category);
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
             if (expense.getCategory().equals(category)) {
@@ -50,14 +51,20 @@ public class ExpenseService {
     }
 
     public void updateExpenseById(long id, int amount, String category, String description) {
+        checkIfEmpty();
+        verifyAmount(amount);
+        verifyCategory(category);
+        verifyDescription(description);
         Expense updated = new Expense(amount, category, description, id);
-        if (!er.updateExpense(id, updated)) {
+        boolean isUpdated = er.updateExpense(id, updated);
+        if (!isUpdated) {
             throw new NoSuchElementException("No expense with such ID");
         }
     }
 
     public void deleteExpense(long id) {
-        if (!er.deleteExpense(id)) {
+        boolean isDeleted = er.deleteExpense(id);
+        if (!isDeleted) {
             throw new NoSuchElementException("Expense with ID: " + id + "doesn't exist");
         }
     }
