@@ -1,6 +1,7 @@
 package com.mojo23tms.spending.cli;
 
 import com.mojo23tms.spending.model.Expense;
+import com.mojo23tms.spending.service.CliService;
 import com.mojo23tms.spending.service.ExpenseService;
 
 import java.util.Scanner;
@@ -11,50 +12,65 @@ public class Main {
         ExpenseService es = new ExpenseService();
         System.out.println("Welcome to Spending Tracker!\nLet's help you keep more and waste less!");
         Scanner sc = new Scanner(System.in);
-        boolean breakTheLoop = false;
-        while(!breakTheLoop) {
-            var allExpense = es.getAllExpenses();
-            int input = readMenuChoice(sc);
+        CliService cliService = new CliService(es);
+        while (true) {
+            printMenu();
+            int input;
+            try {
+                input = cliService.readMenuChoice(sc);
+            } catch (NumberFormatException e) {
+                System.out.printf(e.getMessage());
+                continue;
+            }
             switch (input) {
                 case 1:
                     while (true) {
+                        try {
+                            int amount = readAmount(sc);
+                            String category = readCategory(sc);
+                            String description = readDescription(sc);
+                            cliService.optionAddExpense(amount, category, description);
+                            break;
+                        } catch (Exception e) {
+                            System.out.println(e.getMessage());
+                        }
+                    }
+                case 2:
+                    try {
+                        cliService.optionShowAllExpense();
+                    } catch (NullPointerException e) {
+                        System.out.println(e.getMessage());
+                    }
+                case 3:
+                    try {
+                        System.out.println(cliService.optionShowTotalSpent());
+                    } catch (NullPointerException e) {
+                        System.out.println(e.getMessage());
+                    }
+                case 4:
+                    try {
+                        String category = readCategory(sc);
+                        System.out.println(cliService.optionShowSpentByCategory(category));
+                    } catch (NullPointerException e) {
+                        System.out.println(e.getMessage());
+                    }
+                case 5:
+                    try {
+                        long id = readId(sc);
                         int amount = readAmount(sc);
                         String category = readCategory(sc);
                         String description = readDescription(sc);
-                        try {
-                            es.addExpense(amount, category, description);
-                            break;
-                        } catch (Exception e) {
-                            System.out.println(e.getMessage() + " Enter details again!");
-                        }
+                        System.out.println(cliService.optionUpdateExpense(id, amount, category, description));
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
                     }
-                    System.out.println("Expense is added!\n");
-                    continue;
-                case 2:
-                    if(allExpense.isEmpty()) {
-                        System.out.println("No expenses added yet!\n");
-                        continue;
+                case 6:
+                    try {
+                        long id = readId(sc);
+                        System.out.println(cliService.optionDeleteExpense(id));
+                    } catch (NullPointerException e) {
+                        System.out.println(e.getMessage());
                     }
-                    for (Expense expense : allExpense) {
-                        System.out.println(expense);
-                    }
-                    continue;
-                case 3:
-                    if(allExpense.isEmpty()) {
-                        System.out.println("No expenses added yet!\n");
-                        continue;
-                    }
-                    System.out.println("Total amount spent: $" + es.getTotalSpent() + "\n");
-                    continue;
-                case 4:
-                    if(allExpense.isEmpty()) {
-                        System.out.println("No expenses added yet!\n");
-                        continue;
-                    }
-                    System.out.print("Specify category: ");
-                    String categoryToCount = sc.nextLine();
-                    System.out.println("Total amount by category \"" + categoryToCount + "\": $" + es.getTotalSpent(categoryToCount) + "\n");
-                    continue;
                 case 0:
                     System.out.println("Thank you for using our Spending Tracker!");
                     break;
@@ -63,8 +79,19 @@ public class Main {
         }
     }
 
+    private static void printMenu() {
+        System.out.print("\n1. Add expense\n" +
+                "2. Show all expenses\n" +
+                "3. Show total spent\n" +
+                "4. Show total by category\n" +
+                "5. Update expense\n" +
+                "6. Delete expense\n" +
+                "0. Exit\n" +
+                "Your choice: ");
+    }
+
     private static int readAmount(Scanner sc) {
-        System.out.print("Add expense amount (USD): ");
+        System.out.print("Specify amount (USD): ");
         String amount = sc.nextLine();
         return Integer.parseInt(amount);
     }
@@ -75,26 +102,14 @@ public class Main {
     }
 
     private static String readDescription(Scanner sc) {
-        System.out.print("Add description: ");
+        System.out.print("Specify description: ");
         return sc.nextLine();
     }
 
-    private static int readMenuChoice(Scanner sc) {
-        System.out.print("" +
-                "1. Add expense\n" +
-                "2. Show all expenses\n" +
-                "3. Show total spent\n" +
-                "4. Show total by category\n" +
-                "0. Exit\n" +
-                "Your choice: ");
-        while (true) {
-            String choice = sc.nextLine();
-            try {
-                return Integer.parseInt(choice);
-            } catch (NumberFormatException e) {
-                System.out.println("Wrong entry! Enter anything from 0 - 4!");
-            }
-        }
+    private static long readId(Scanner sc) {
+        System.out.print("Specify ID: ");
+        String id = sc.nextLine();
+        return Long.parseLong(id);
     }
 
 }

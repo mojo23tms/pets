@@ -6,6 +6,8 @@ import com.mojo23tms.spending.repository.ExpenseRepository;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 public class ExpenseService {
 
@@ -26,7 +28,7 @@ public class ExpenseService {
             throw new IllegalArgumentException("Description can't be empty!");
         }
         id++;
-        er.saveExpense(new Expense(amount, category, description, LocalDate.now(), id));
+        er.saveExpense(new Expense(amount, category, description, id));
     }
 
     public int getTotalSpent() {
@@ -51,13 +53,25 @@ public class ExpenseService {
         return er.getExpenseList();
     }
 
-    public void updateExpense(long id, int amount, String category, String description) {
-        er.updateById(id, Map.of("amount", String.valueOf(amount),
-                "category", category,
-                "description", description));
+    public boolean updateExpenseById(long id, int amount, String category, String description) {
+        if (amount > 0) {
+        }
+
+        if (amount > 0 && !category.isBlank() && !description.isBlank()) {
+            Expense updated = new Expense(amount, category, description, id);
+            return er.updateExpense(id, updated);
+        }
+        return false;
     }
 
-    public void deleteExpense(long id) {
-        er.deleteById(id);
+    public boolean deleteExpense(long id) {
+        if (er.deleteExpense(id)) {
+            throw new NoSuchElementException("Expense with ID: " + id + "doesn't exist");
+        }
+
+        return true;
+
     }
+
+
 }

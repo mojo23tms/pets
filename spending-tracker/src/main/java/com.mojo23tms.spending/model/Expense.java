@@ -8,6 +8,7 @@ public class Expense {
     private final String category;
     private final String description;
     private final LocalDate date;
+    private final LocalDate lastUpdated;
 
     private final long id;
 
@@ -31,11 +32,11 @@ public class Expense {
         return this.id;
     }
 
-    public Expense(int amount, String category, String description, LocalDate date, long id) {
+    public Expense(int amount, String category, String description, long id) {
         this.amount = amount;
         this.category = category;
         this.description = description;
-        this.date = date;
+        this.date = LocalDate.now();
         this.id = id;
     }
 

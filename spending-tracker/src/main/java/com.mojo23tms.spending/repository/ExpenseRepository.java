@@ -23,41 +23,19 @@ public class ExpenseRepository {
                 .findAny();
     }
 
-    public boolean deleteById(long id) {
-        Optional<Expense> toDelete = findById(id);
-        if (toDelete.isEmpty()) {
-            return false;
-        }
-        expenseList.remove(toDelete.get());
-        return true;
+    public boolean deleteExpense(long id) {
+        Optional<Expense> expense = findById(id);
+        return expense.map(expenseList::remove).orElse(false);
     }
 
-    public boolean updateById(long id, Map<String, String> data) {
+    public boolean updateExpense(long id, Expense updated) {
         Optional<Expense> originalExpense = findById(id);
-
         if (originalExpense.isEmpty()) {
             return false;
         }
 
-        int amount = originalExpense.get().getAmount();
-        String category = originalExpense.get().getCategory();
-        String description = originalExpense.get().getDescription();
-
-        if (data.containsKey("amount")) {
-            amount = Integer.parseInt(data.get("amount"));
-        }
-
-        if (data.containsKey("category")) {
-            category = data.get("category");
-        }
-
-        if (data.containsKey("description")) {
-            description = data.get("category");
-        }
-
-        Expense updatedExpense = new Expense(amount, category, description, LocalDate.now(), originalExpense.get().getId());
         expenseList.remove(originalExpense.get());
-        expenseList.add(updatedExpense);
+        expenseList.add(updated);
         return true;
     }
 

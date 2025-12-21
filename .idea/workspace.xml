@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfb0f39e-3f39-4ceb-b758-1bd79d3f8c6e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/CliService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/model/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/model/MoneyBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/repository/ExpenseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/model/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/repository/ExpenseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spending-tracker/src/main/java/com.mojo23tms.spending/service/ExpenseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +27,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mojo23tms"
+  }
+}]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="69dcbbb7-e65a-4b68-9a22-f763951701d0" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/mojo23tms/pets.git",
+    "accountId": "69dcbbb7-e65a-4b68-9a22-f763951701d0"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="36NzapT6FoJPVxCwMYgYBwMthV2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -55,10 +69,19 @@
     "JUnit.ExpenseServiceTest.executor": "Run",
     "JUnit.ExpenseServiceTest.test_checkValidExpense.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Kirich Files/Software/Intellij IDEA Projects/pets/spending-tracker/src/test/java/com.mojo23tms.spending"
+    "last_opened_file_path": "D:/Kirich Files/Software/Intellij IDEA Projects/pets/spending-tracker/src/test/java/com.mojo23tms.spending",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -161,6 +184,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -169,8 +200,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764861883034</updated>
+      <workItem from="1766170080084" duration="5300000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -204,7 +239,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/spending-tracker/src/com/mojo23tms/spending/test/service/ExpenseServiceTest.java</url>
           <line>20</line>
-          <properties class="service.ExpenseServiceTest" method="checkValidExpense">
+          <properties class="service.ExpenseServiceTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
