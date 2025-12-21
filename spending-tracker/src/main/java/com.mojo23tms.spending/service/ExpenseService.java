@@ -25,7 +25,6 @@ public class ExpenseService {
     }
 
     public int getTotalSpent() throws NullPointerException{
-        checkIfEmpty();
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
             sum += expense.getAmount();
@@ -34,7 +33,6 @@ public class ExpenseService {
     }
 
     public int getTotalSpent(String category) throws NullPointerException {
-        checkIfEmpty();
         verifyCategory(category);
         int sum = 0;
         for (Expense expense : er.getExpenseList()) {
@@ -46,7 +44,6 @@ public class ExpenseService {
     }
 
     public List<Expense> getAllExpenses() throws NullPointerException{
-        checkIfEmpty();
         return er.getExpenseList();
     }
 

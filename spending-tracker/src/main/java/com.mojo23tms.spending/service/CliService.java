@@ -17,9 +17,13 @@ public class CliService {
     public int readMenuChoice(Scanner sc) {
         String choice = sc.nextLine();
         try {
+            int parsedChoice = Integer.parseInt(choice);
+            if (parsedChoice > 6 || parsedChoice < 0) {
+                throw new IllegalArgumentException("Wrong choice! Specify number from 0 to 6 depending on menu option!");
+            }
             return Integer.parseInt(choice);
         } catch (NumberFormatException e) {
-            throw new NumberFormatException("Wrong choice! Choose from 0 to 6!");
+            throw new NumberFormatException("Wrong input! Specify number from 0 to 6 depending on menu option!");
         }
     }
 
